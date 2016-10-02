@@ -1,17 +1,48 @@
 <header>
-    <nav>
-        <a [routerLink]="['']">Home</a>
-        <a [routerLink]="['about']">About</a>
+    <!--<nav>-->
+        <!--<a [routerLink]="['']" md-button color="accent">Home</a>-->
+        <!--<a [routerLink]="['about']" md-button color="primary">About</a>-->
+    <!--</nav>-->
+    <nav class="purple lighten-1">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">singsing.io</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a [routerLink]="['']">Home</a></li>
+                <li><a [routerLink]="['about']">About</a></li>
+            </ul>
+        </div>
     </nav>
 </header>
 <main>
-    <h1>Hello from {{api.title}}!</h1>
-
-    <!-- Images (and assets) are parsed and loaded from within the public directory -->
-    <img src="/img/angular.png">
-
+    <!--<h1>Hello from {{api.title}}!</h1>-->
+     <!--Images (and assets) are parsed and loaded from within the public directory-->
+    <!--<img src="/img/angular.png">-->
     <router-outlet></router-outlet>
 </main>
-<footer>
-    <a [href]="url">Webpack Angular 2 Starter</a>
+<footer class="page-footer purple lighten-1">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><i class="fa fa-lg fa-facebook-square"></i>
+                        <a class="grey-text text-lighten-3" href="">Facebook</a>
+                    </li>
+                    <li><i class="fa fa-lg fa-linkedin-square" aria-hidden="true"></i>
+                        <a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/liuxing0514">Xing Liu</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <i class="fa fa-lg fa-copyright"></i> 2016 Copyright Reserved
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+    </div>
 </footer>

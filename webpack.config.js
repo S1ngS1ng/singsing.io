@@ -95,7 +95,8 @@ module.exports = function makeWebpackConfig() {
             // copy those assets to output
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'file?name=fonts/[name].[hash].[ext]?'
+                // loader: 'file?name=fonts/[name].[hash].[ext]?'
+                loader: 'url-loader?limit=100000'
             },
 
             // Support for *.json files.
@@ -162,7 +163,16 @@ module.exports = function makeWebpackConfig() {
             'process.env': {
                 ENV: JSON.stringify(ENV)
             }
+        }),
+
+        // Add jQuery for materialize
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery",
+            Hammer: "hammerjs/hammer"
         })
+
     ];
 
     if (!isTest && !isProd) {

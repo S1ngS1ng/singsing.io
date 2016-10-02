@@ -1,9 +1,13 @@
 // styles in src/style directory are applied to the whole page
 body {
-    background: #0147A7;
+    background: #fff;
     color: #fff;
 }
 
 a {
     color: #03A9F4;
+}
+// TODO: check other way around
+footer.page-footer {
+    margin-top: 0 !important;
 }
